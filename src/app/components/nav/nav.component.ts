@@ -12,7 +12,6 @@ export class NavComponent {
     constructor(private router: Router) { }
 
     navigate(destination: 'home' | 'bio' | 'registration') {
-        console.log(destination)
         switch (destination) {
             case 'home': {
                 this.router.navigateByUrl('/home')
