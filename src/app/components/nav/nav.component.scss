@@ -1,11 +1,28 @@
 nav {
-  outline: 2px solid blue;
+  background-color: var(--grey);
   box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.314);
-  .first {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.3rem;
+  .item {
     background-color: blue;
     width: fit-content;
     padding: 0.2rem 2rem;
     font-size: 2rem;
     font-weight: 600;
+  }
+  .first {
+    background-color: grey;
+    color: white;
+  }
+  .second,
+  .third {
+    cursor: pointer;
+
+    transition: 0.2s;
+    &:hover {
+      scale: 1.02;
+      box-shadow: -3px 3px 10px black;
+    }
   }
 }

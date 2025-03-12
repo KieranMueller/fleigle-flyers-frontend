@@ -1,3 +1,10 @@
+:root {
+  --light-blue: #0c78c8;
+  --blue: #486f93;
+  --white: #f8fff4;
+  --grey: #35363b;
+}
+
 @font-face {
   font-family: "dmsans";
   src: url("/font/static/DMSans-Regular.ttf") format("truetype");
@@ -10,4 +17,8 @@ body,
 html {
   box-sizing: border-box;
   font-family: "dmsans", serif;
+}
+
+body {
+  background-color: var(--blue) !important;
 }

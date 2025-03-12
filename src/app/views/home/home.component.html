@@ -1,39 +1,30 @@
 <div class="box">
   <div class="inner">
-    <div class="pic-slideshow">
-      <p>(picture slideshow here)</p>
-      <app-carousel></app-carousel>
-    </div>
-    <div class="content">
-      <h1>Fleigle's Flyers</h1>
-      <h3>
-        Fleigle's Athletics is a Sports Performance and Human Development Track
-        and Field Club Located in Minnesota.
-      </h3>
-    </div>
-    <div class="calendar">(upcoming events, calendar slideshow here)</div>
-    <div class="history">
-      (history etc.) Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Itaque libero sint inventore vel commodi explicabo nisi cumque, dolores
-      nam corrupti. Corporis sapiente error voluptate maxime aliquid doloribus
-      unde maiores nulla, quos libero repudiandae est vel omnis at impedit
-      distinctio consequatur quibusdam debitis illo odio, mollitia commodi harum
-      nostrum. Velit, quidem.
-    </div>
+    <section>
+      <div class="pic-slideshow">
+        <app-carousel></app-carousel>
+      </div>
+      <div class="content-outer">
+        <div class="content">
+          <h1>Fleigle's Flyers</h1>
+          <h3>
+            Fleigle's Athletics is a Sports Performance and Human Development
+            Track and Field Club Located in Minnesota.
+          </h3>
+        </div>
+        <div class="calendar">(upcoming events, calendar slideshow here)</div>
+        <div class="history">
+          (history etc.) Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Itaque libero sint inventore vel commodi explicabo nisi cumque,
+          dolores nam corrupti. Corporis sapiente error voluptate maxime aliquid
+          doloribus unde maiores nulla, quos libero repudiandae est vel omnis at
+          impedit distinctio consequatur quibusdam debitis illo odio, mollitia
+          commodi harum nostrum. Velit, quidem.
+        </div>
+      </div>
+    </section>
     <div class="socials">
-      <p>(social media tags/links here)</p>
-      <img
-        class="social"
-        (click)="socialRoute('facebook')"
-        src="../../../../icons/facebook-icon.svg"
-        alt="facebook icon"
-      />
-      <img
-        class="social"
-        (click)="socialRoute('instagram')"
-        src="../../../../icons/insta-icon.svg"
-        alt="instagram icon"
-      />
+      <app-socials></app-socials>
     </div>
   </div>
 </div>
