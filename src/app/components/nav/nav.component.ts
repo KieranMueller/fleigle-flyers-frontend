@@ -11,18 +11,14 @@ import { Router } from '@angular/router'
 export class NavComponent {
     constructor(private router: Router) { }
 
-    navigate(destination: 'home' | 'bio' | 'registration') {
-        switch (destination) {
-            case 'home': {
-                this.router.navigateByUrl('/home')
+    navigate(option: 'insta' | 'fb') {
+        switch (option) {
+            case 'fb': {
+                window.open('https://www.facebook.com/fleifly/', '_blank')
                 break
             }
-            case 'bio': {
-                this.router.navigateByUrl('/bios')
-                break
-            }
-            case 'registration': {
-                this.router.navigateByUrl('/register')
+            case 'insta': {
+                window.open('https://www.instagram.com/fleiglesflyers/?hl=en', '_blank')
                 break
             }
         }

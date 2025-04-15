@@ -1,10 +1,10 @@
-.box {
-  outline: 1px solid black;
+.container {
   padding: 2rem;
-  .inner,
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   .content,
   .history {
-    outline: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,14 +24,6 @@
   width: 50%;
 }
 
-h1 {
+h2 {
   font-size: 3.5rem;
-  font-weight: 600;
-  text-shadow: -2px -2px 0 var(--light-blue), 2px -2px 0 var(--light-blue),
-    2px 2px 0 var(--light-blue), 2px 2px 0 var(--light-blue);
-}
-
-section {
-  display: flex;
-  justify-content: space-evenly;
 }

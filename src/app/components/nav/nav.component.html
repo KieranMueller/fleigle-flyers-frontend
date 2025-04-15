@@ -1,5 +1,39 @@
 <nav>
-  <div class="item first" (click)="navigate('home')">Fleigle's Flyers</div>
-  <div class="item second" (click)="navigate('bio')">Coaches' Bio</div>
-  <div class="item third" (click)="navigate('registration')">Registration</div>
+  <img
+    class="bg-img"
+    src="../../../../images/track.jpg"
+    alt="Indoor Track With Hurdles"
+  />
+  <div class="top-strip">
+    <div>
+      <img
+        class="emblem"
+        src="../../../../icons/flyers.png"
+        alt="Flyers Icon"
+      />
+    </div>
+    <div class="links">
+      <a href="">About</a>
+      <a href="">Events</a>
+      <a href="">Coaches</a>
+      <a href="">Resources</a>
+      <a href="">Register</a>
+      <img
+        (click)="navigate('insta')"
+        class="icon"
+        src="../../../../icons/insta.svg"
+        alt="Instagram Icon"
+      />
+      <img
+        (click)="navigate('fb')"
+        class="icon"
+        src="../../../../icons/fb.svg"
+        alt="Facebook Icon"
+      />
+      <img class="icon" src="../../../../icons/email.png" alt="Email Icon" />
+    </div>
+  </div>
+  <div class="title">
+    <h1>Fleigle's Flyers</h1>
+  </div>
 </nav>
