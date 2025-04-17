@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'
-import { Router } from '@angular/router'
+import { Component, OnInit } from '@angular/core'
+import { GlobalStateService } from '../../shared/global-state.service'
 
 @Component({
     selector: 'app-nav',
@@ -8,8 +8,16 @@ import { Router } from '@angular/router'
     templateUrl: './nav.component.html',
     styleUrl: './nav.component.scss'
 })
-export class NavComponent {
-    constructor(private router: Router) { }
+export class NavComponent implements OnInit {
+
+    constructor(public globalState: GlobalStateService) { }
+
+    ngOnInit() {
+        this.globalState.setMobile(window.innerWidth)
+        window.addEventListener('resize', () => {
+            this.globalState.setMobile(window.innerWidth)
+        })
+    }
 
     navigate(option: 'insta' | 'fb') {
         switch (option) {

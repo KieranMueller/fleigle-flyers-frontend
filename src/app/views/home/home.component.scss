@@ -1,17 +1,24 @@
-.container {
-  padding: 2rem;
+.flex-row {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container {
+  padding: 2rem;
   .content,
   .history {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .socials {
-    margin-top: 2rem;
   }
   .history {
     overflow-y: scroll;
@@ -26,4 +33,9 @@
 
 h2 {
   font-size: 3.5rem;
+}
+
+.pic-slideshow {
+  margin-bottom: 30px;
+  margin-right: 30px;
 }

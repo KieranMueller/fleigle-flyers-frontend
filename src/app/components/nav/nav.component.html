@@ -12,6 +12,7 @@
         alt="Flyers Icon"
       />
     </div>
+    @if (!globalState.isMobile()) {
     <div class="links">
       <a href="">About</a>
       <a href="">Events</a>
@@ -32,6 +33,13 @@
       />
       <img class="icon" src="../../../../icons/email.png" alt="Email Icon" />
     </div>
+    } @else {
+    <img
+      class="hamburger"
+      src="../../../../icons/hamburger-menu.png"
+      alt="Dropdown menu icon"
+    />
+    }
   </div>
   <div class="title">
     <h1>Fleigle's Flyers</h1>
