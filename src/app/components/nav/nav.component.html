@@ -1,3 +1,6 @@
+@if (dropdownOpen) {
+<div class="dropdown-backdrop"></div>
+}
 <nav>
   <img
     class="bg-img"
@@ -18,13 +21,13 @@
       <a class="link" href="">{{ link }}</a>
       }
       <img
-        (click)="navigate('insta')"
+        (click)="navService.navigate('insta')"
         class="icon"
         src="../../../../icons/insta.svg"
         alt="Instagram Icon"
       />
       <img
-        (click)="navigate('fb')"
+        (click)="navService.navigate('fb')"
         class="icon"
         src="../../../../icons/fb.svg"
         alt="Facebook Icon"

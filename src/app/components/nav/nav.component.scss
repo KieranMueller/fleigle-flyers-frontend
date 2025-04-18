@@ -59,16 +59,18 @@ nav {
 .hamburger {
   width: 30px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .dropdown-container {
   position: relative;
+  z-index: 2;
 }
 
 .dropdown {
   position: absolute;
   top: 30px;
-  left: -30px;
+  left: -50px;
   z-index: 2;
   background-color: gray;
   display: flex;
@@ -77,6 +79,16 @@ nav {
   align-items: center;
   border-radius: 10px;
   padding: 10px;
+}
+
+.dropdown-backdrop {
+  background-color: rgba(0, 0, 0, 0.429);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
 }
 
 .link {
@@ -93,7 +105,7 @@ nav {
     }
     .title {
       h1 {
-        font-size: 4rem;
+        font-size: clamp(2rem, 10vw, 5rem);
       }
     }
   }

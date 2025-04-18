@@ -1,0 +1,44 @@
+<div class="container1">
+  <div class="row1">
+    <!-- <div class="col first"> -->
+    <div
+      class="col"
+      [ngClass]="globalState.isMobile() ? ['border-right'] : ['horiz-margin']"
+    >
+      <h3>Fleigle's Flyers</h3>
+      <div>
+        <img
+          (click)="navService.navigate('insta')"
+          class="icon"
+          src="../../../../icons/insta.svg"
+          alt="Instagram Icon"
+        />
+        <img
+          (click)="navService.navigate('fb')"
+          class="icon"
+          src="../../../../icons/fb.svg"
+          alt="Facebook Icon"
+        />
+        <img class="icon" src="../../../../icons/email.png" alt="Email Icon" />
+      </div>
+    </div>
+    <div class="col">
+      <h3 class="header">About</h3>
+      <a href="">Who We Are</a>
+      <a href="">Meet the Coaches</a>
+      <a href="">Contact</a>
+    </div>
+    <div class="col">
+      <h3 class="header">Schedule</h3>
+      <a href="">Indoor Calendar</a>
+      <a href="">Outdoor Calendar</a>
+      <a href="">Full Calendar</a>
+    </div>
+    <div class="col">
+      <h3 class="header">Get Involved</h3>
+      <a href="">Meetings</a>
+      <a href="">Filler</a>
+      <a href="">Filler</a>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, HostListener, OnInit } from '@angular/core'
 import { GlobalStateService } from '../../shared/global-state.service'
+import { NavigateService } from '../../shared/navigate.service'
 
 @Component({
     selector: 'app-nav',
@@ -12,7 +13,7 @@ export class NavComponent implements OnInit {
     dropdownOpen = false
     links = ['About', 'Events', 'Coaches', 'Resources', 'Register']
 
-    constructor(public globalState: GlobalStateService) { }
+    constructor(public globalState: GlobalStateService, public navService: NavigateService) { }
 
     ngOnInit() {
         this.globalState.setMobile(window.innerWidth)
@@ -21,17 +22,10 @@ export class NavComponent implements OnInit {
         })
     }
 
-    navigate(option: 'insta' | 'fb') {
-        switch (option) {
-            case 'fb': {
-                window.open('https://www.facebook.com/fleifly/', '_blank')
-                break
-            }
-            case 'insta': {
-                window.open('https://www.instagram.com/fleiglesflyers/?hl=en', '_blank')
-                break
-            }
-        }
+    @HostListener('click', ['$event'])
+    handleClick(event: any) {
+        if (event.target.classList.contains('dropdown-backdrop'))
+            this.dropdownOpen = false
     }
 
     toggleDropdown() {

@@ -13,7 +13,6 @@
 
 .container1 {
   padding: 2rem;
-  //   margin: 0;
   .content,
   .history {
     display: flex;
@@ -38,4 +37,14 @@ h2 {
 .pic-slideshow {
   margin-bottom: 30px;
   margin-right: 30px;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.bg-white {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 20px;
 }
