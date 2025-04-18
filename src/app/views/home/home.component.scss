@@ -11,8 +11,9 @@
   align-items: center;
 }
 
-.container {
+.container1 {
   padding: 2rem;
+  //   margin: 0;
   .content,
   .history {
     display: flex;
@@ -28,7 +29,6 @@
 .content-outer {
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
 
 h2 {

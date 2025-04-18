@@ -9,6 +9,8 @@ import { GlobalStateService } from '../../shared/global-state.service'
     styleUrl: './nav.component.scss'
 })
 export class NavComponent implements OnInit {
+    dropdownOpen = false
+    links = ['About', 'Events', 'Coaches', 'Resources', 'Register']
 
     constructor(public globalState: GlobalStateService) { }
 
@@ -30,5 +32,9 @@ export class NavComponent implements OnInit {
                 break
             }
         }
+    }
+
+    toggleDropdown() {
+        this.dropdownOpen = !this.dropdownOpen
     }
 }

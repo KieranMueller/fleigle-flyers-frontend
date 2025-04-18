@@ -14,11 +14,9 @@
     </div>
     @if (!globalState.isMobile()) {
     <div class="links">
-      <a href="">About</a>
-      <a href="">Events</a>
-      <a href="">Coaches</a>
-      <a href="">Resources</a>
-      <a href="">Register</a>
+      @for (link of links; track link) {
+      <a class="link" href="">{{ link }}</a>
+      }
       <img
         (click)="navigate('insta')"
         class="icon"
@@ -34,11 +32,21 @@
       <img class="icon" src="../../../../icons/email.png" alt="Email Icon" />
     </div>
     } @else {
-    <img
-      class="hamburger"
-      src="../../../../icons/hamburger-menu.png"
-      alt="Dropdown menu icon"
-    />
+    <div class="dropdown-container">
+      <img
+        class="hamburger"
+        src="../../../../icons/hamburger-menu.png"
+        alt="Dropdown menu icon"
+        (click)="toggleDropdown()"
+      />
+      @if (dropdownOpen) {
+      <div class="dropdown">
+        @for (link of links; track link) {
+        <a class="link" href="">{{ link }}</a>
+        }
+      </div>
+      }
+    </div>
     }
   </div>
   <div class="title">
