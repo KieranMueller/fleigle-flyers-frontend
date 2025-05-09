@@ -13,12 +13,13 @@
         class="emblem"
         src="../../../../icons/flyers.png"
         alt="Flyers Icon"
+        [routerLink]="'home'"
       />
     </div>
     @if (!globalState.isMobile()) {
     <div class="links">
       @for (link of links; track link) {
-      <a class="link" href="">{{ link }}</a>
+      <a class="link" [routerLink]="link[1]">{{ link[0] }}</a>
       }
       <img
         (click)="navService.navigate('insta')"
@@ -45,7 +46,7 @@
       @if (dropdownOpen) {
       <div class="dropdown">
         @for (link of links; track link) {
-        <a class="link" href="">{{ link }}</a>
+        <a class="link" [href]="link[1]">{{ link[0] }}</a>
         }
       </div>
       }
