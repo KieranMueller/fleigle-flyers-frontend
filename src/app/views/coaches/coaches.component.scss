@@ -16,7 +16,7 @@
 .overlay {
   position: relative;
   display: inline-block;
-  p {
+  span {
     position: absolute;
     left: 40px;
     bottom: 0;
@@ -29,6 +29,12 @@
     font-size: 18px;
     width: 60%;
   }
+}
+
+.name {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .title {
