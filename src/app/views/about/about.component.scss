@@ -1,0 +1,38 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  margin: 10px 0;
+}
+
+.section-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-green {
+  background-color: var(--light-green);
+}
+
+.description {
+  width: 50vw;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
