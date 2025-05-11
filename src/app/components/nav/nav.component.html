@@ -18,6 +18,9 @@
     </div>
     @if (!globalState.isMobile()) {
     <div class="links">
+      @if (!onHomePage) {
+        <a class="link" [routerLink]="home[1]">{{ home[0] }}</a>
+      }
       @for (link of links; track link) {
       <a class="link" [routerLink]="link[1]">{{ link[0] }}</a>
       }
