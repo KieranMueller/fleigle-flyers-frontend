@@ -19,10 +19,14 @@
     @if (!globalState.isMobile()) {
     <div class="links">
       @if (!onHomePage) {
-        <a class="link" [routerLink]="home[1]">{{ home[0] }}</a>
-      }
-      @for (link of links; track link) {
-      <a class="link" [routerLink]="link[1]">{{ link[0] }}</a>
+      <a class="link" [routerLink]="home[1]">{{ home[0] }}</a>
+      } @for (link of links; track link; let i = $index) {
+      <a
+        class="link"
+        [routerLink]="link[1]"
+        [ngClass]="{ active: currentLink === i }"
+        >{{ link[0] }}</a
+      >
       }
       <img
         (click)="navService.navigate('insta')"
@@ -58,5 +62,11 @@
   </div>
   <div class="title">
     <h1>Fleigle's Flyers</h1>
+    <a
+      href="https://fleiglesflyers.blogspot.com/p/essx-poles.html"
+      target="_blank"
+    >
+      <button class="equipment-btn">Equipment & Rentals</button>
+    </a>
   </div>
 </nav>
